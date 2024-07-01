@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+
+		<link rel="preconnect" href="https://fonts.googleapis.com">
+		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+		<link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet">
+
+		<link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+		<link rel="stylesheet" href="style.css">
+			
+		<title>Frontend Mentor | Newsletter sign-up form with success message</title>
+
+	</head>
+	<body>
+
+		<main class="main-block flex-column-reversed">
+			<div class="main-content">
+					
+				<h1 class="text-bold text-700">Stay updated!</h1>
+				<p class="text-primary text-400">Join 60,000+ product managers receiving monthly updates on:</p>
+				<ul>
+					<li class="text-primary text-400 checkmark">Product discovery and building what matters</li>
+					<li class="text-primary text-400 checkmark">Measuring to ensure updates are a success</li>
+					<li class="text-primary text-400 checkmark">And much more!</li>
+				</ul>
+
+				<div class="email-block">
+					
+					<div class="label-block">
+						<label for="email" class="text-semibold text-300">Email address</label>
+						<label for="error-message" class="label-warning | text-semibold text-300 text-warning invisible">Valid email required</label>
+					</div>
+					<input type="text" class="input-email | input-primary text-400 text-primary" oninput="removeInputWarning(this)" placeholder="email@company.com">
+
+				</div>
+				
+
+
+				<button class="button-primary text-400 text-semibold" onclick="emailValidator()">Subscribe to monthly newsletter</button>
+
+			</div>
+			<img src="./images/illustration-sign-up-desktop.svg" class="side-image" alt="side-image">
+			<div class="message-block invisible">
+				<div class="message-mark-content">
+					<img src="./images/icon-success.svg" alt="success" class="image-success">
+					<div class="message-content">
+						<h1 class="text-bold text-700">Thanks for subscribing!</h1>
+						<p class="text-primary text-400">A confirmation email has been sent to <b class="message-email | text-bold">someemail@gmail.com</b>. 
+							Please open it and click the button inside to confirm your subscription.</p>
+					</div>
+				</div>
+				
+				<button class="button-primary text-400 text-bold">Dismiss message</button>
+	
+			</div>
+		</main>
+
+	</body>
+	<script src="script.js"></script>
+</html>
